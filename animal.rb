@@ -41,6 +41,9 @@ class Tuna < SwimmingAnimal
   # ....
 end
 
+class Duck  # ????
+end
+
 pigeon = Pigeon.new
 puts pigeon.flying?
 pigeon.take_off
