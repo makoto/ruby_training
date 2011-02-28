@@ -29,8 +29,16 @@ class FlyingAnimal < Animal
   end
 end
 
+class SwimmingAnimal < Animal
+  #...
+end
+
 class Pigeon < FlyingAnimal
   # ...
+end
+
+class Tuna < SwimmingAnimal
+  # ....
 end
 
 pigeon = Pigeon.new
