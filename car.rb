@@ -4,12 +4,11 @@ class Car
   end
   
   def get_topspeed
-    return @top_speed
+    @top_speed
   end
   
   def set_topspeed(speed)
     @top_speed = speed
-    return @top_speed
   end
 end
 
