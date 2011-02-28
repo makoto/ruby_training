@@ -8,7 +8,7 @@ class Animal
   end
 end
 
-class FlyingAnimal < Animal
+module FlyingAnimal
   attr_accessor :flying
 
   def initialize
@@ -29,19 +29,24 @@ class FlyingAnimal < Animal
   end
 end
 
-class SwimmingAnimal < Animal
+module SwimmingAnimal
   #...
 end
 
-class Pigeon < FlyingAnimal
+class Pigeon < Animal
+  include FlyingAnimal
   # ...
 end
 
-class Tuna < SwimmingAnimal
+class Tuna < Animal
+  include SwimmingAnimal
   # ....
 end
 
-class Duck  # ????
+
+class Duck < Animal
+  include FlyingAnimal
+  include SwimmingAnimal
 end
 
 pigeon = Pigeon.new
