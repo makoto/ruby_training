@@ -33,8 +33,15 @@ module SwimmingAnimal
   #...
 end
 
+module Bird
+  def type
+    "bird"
+  end
+end
+
 class Pigeon < Animal
   include FlyingAnimal
+  extend Bird
   # ...
 end
 
@@ -49,9 +56,10 @@ class Duck < Animal
   include SwimmingAnimal
 end
 
+
 pigeon = Pigeon.new
 puts pigeon.flying?
 pigeon.take_off
 puts pigeon.flying?
-
+puts Pigeon.type
 
