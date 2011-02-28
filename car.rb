@@ -3,17 +3,17 @@ class Car
     @top_speed = top_speed
   end
   
-  def get_topspeed
+  def top_speed
     @top_speed
   end
   
-  def set_topspeed(speed)
+  def top_speed=(speed)
     @top_speed = speed
   end
 end
 
 
 car = Car.new(150)
-puts car.get_topspeed
-car.set_topspeed(250)
-puts car.get_topspeed
+puts car.top_speed
+car.top_speed = 250
+puts car.top_speed
